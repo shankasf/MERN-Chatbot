@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+/* Full-screen container with centered content */
+.app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f4f4f4; /* Adjust background as desired */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Center the h1 both horizontally and vertically */
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem; /* Adjust font size as needed */
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Each letter starts hidden and then fades in */
+.welcome-text span {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/* Keyframes for fade in (no fade out) */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
