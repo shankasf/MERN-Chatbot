@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 function App() {
-  const text = "Welcome to the AI powered Chatbot!";
+  const text = "Welcome to the AI powered Chatbot...";
 
   return (
     <div className="app-container">
